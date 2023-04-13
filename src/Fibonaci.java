@@ -8,5 +8,17 @@ public class Fibonaci {
         }
         return liczba_koncowa;
     }
+    private static int i=0;
+    private static int liczba_startowa=1;
+    public static int fib_rek(int n, int wynik){
+        if(i<n){
+            i++;
+            wynik=wynik+liczba_startowa;
+            liczba_startowa=wynik-liczba_startowa;
+            return fib_rek(n, wynik);
+        }
+        return wynik;
+    }
+
 
 }

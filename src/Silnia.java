@@ -6,6 +6,15 @@ public class Silnia {
         }
         return wynik;
     }
-
+    private static int i=0;
+    private static int koniec=1;
+    public static int sil_rek(int n, int wynik){
+        if(i<n){
+            i++;
+            koniec=koniec*wynik;
+            return sil_rek(n, wynik+1);
+        }
+        return koniec;
+    }
 
 }
